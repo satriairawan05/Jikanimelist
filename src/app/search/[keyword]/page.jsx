@@ -6,7 +6,7 @@ const Page = async ({ params }) => {
   const { keyword } = params
 
   const decodedKeyword = decodeURI(keyword)
-  const searchAnime = await getAnimeResponse("anime", `q=${decodedKeyword}`)
+  const searchAnime = await getAnimeResponse("anime", `q=${decodedKeyword}&limit=24`)
 
   return (
     <>
