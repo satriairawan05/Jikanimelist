@@ -17,7 +17,7 @@ const Pagination = ({ page, lastPage, setPage }) => {
   };
 
   return (
-    <div className="flex justify-center items-center py-4 px-2 gap-4 text-anime-primary text-2xl">
+    <div className="flex items-center justify-center gap-4 px-2 py-4 text-2xl text-anime-primary">
       {page <= 1 ? null : (
         <button onClick={handlePrevPage} className="transition-all hover:text-anime-accent">
           Prev

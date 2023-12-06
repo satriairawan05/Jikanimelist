@@ -1,12 +1,12 @@
-import { getAnimeResponse } from "@/libs/api"
-import AnimeList from "@/components/AnimeList"
-import Header from "@/components/AnimeList/Header"
+import { getAnimeResponse } from "@/libs/api";
+import AnimeList from "@/components/AnimeList";
+import Header from "@/components/AnimeList/Header";
 
 const Page = async ({ params }) => {
-  const { keyword } = params
+  const { keyword } = params;
 
-  const decodedKeyword = decodeURI(keyword)
-  const searchAnime = await getAnimeResponse("anime", `q=${decodedKeyword}&limit=24`)
+  const decodedKeyword = decodeURI(keyword);
+  const searchAnime = await getAnimeResponse("anime", `q=${decodedKeyword}&limit=24`);
 
   return (
     <>
@@ -15,7 +15,7 @@ const Page = async ({ params }) => {
         <AnimeList api={searchAnime} />
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

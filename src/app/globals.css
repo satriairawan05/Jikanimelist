@@ -2,37 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-accent: '#A30015';
+  --color-dark: '#000000';
+  --color-triary: #e4e4ed;
+  --transition: 0.5s;
+  --anime-loading: 1s;
+  --scale: 102%;
+  --border-radius: 50%;
+  --null: 0;
+  --hundred-pixel: 100px;
+}
+
 *,
 *::before,
 *::after {
-  padding: 0;
-  margin: 0;
+  padding: var(--null);
+  margin: var(--null);
   box-sizing: border-box;
 }
 
 img {
-  transition: 0.5s ease all;
-  -webkit-transition: 0.5s ease all;
-  -moz-transition: 0.5s ease all;
-  -ms-transition: 0.5s ease all;
-  -o-transition: 0.5s ease all;
+  transition: var(--transition) ease all;
+  -webkit-transition: var(--transition) ease all;
+  -moz-transition: var(--transition) ease all;
+  -ms-transition: var(--transition) ease all;
+  -o-transition: var(--transition) ease all;
 }
 
 img:hover {
-  scale: 102%;
+  scale: var(--scale);
 }
 
 .loading {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: radial-gradient(farthest-side, #A30000 95%, #0000) 50% 1px/24px
+  width: var(--hundred-pixel);
+  height: var(--hundred-pixel);
+  border-radius: var(--border-radius);
+  background: radial-gradient(farthest-side, var(--color-accent) 95%, var(--color-dark)) 50% 1px/24px
       24px no-repeat,
-    radial-gradient(farthest-side, #0000 calc(100% - 28px), #e4e4ed 0);
-  animation: s9 1s infinite linear;
+    radial-gradient(farthest-side, var(--color-dark) calc(100% - 28px), var(--color-triary) 0);
+  animation: circle var(--anime-loading) infinite linear;
 }
 
-@keyframes s9 {
+@keyframes circle {
   to {
     transform: rotate(1turn);
   }
