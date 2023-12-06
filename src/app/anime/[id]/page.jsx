@@ -5,7 +5,6 @@ import Image from "next/image"
 const Page = async ({ params: { id } }) => {
     const anime = await getAnimeResponse(`anime/${id}`)
     const animeStatistics = await getAnimeResponse(`anime/${id}/statistics`)
-    console.log('animeStatistics: ', animeStatistics);
 
     return (
         <>
