@@ -1,6 +1,7 @@
 import { Lato } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const font = Lato({ subsets: ['latin'], weight: "400" })
 
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
       <body className={`${font.className} bg-anime-dark`}>
         <Navbar />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   )
