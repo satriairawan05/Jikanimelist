@@ -1,10 +1,16 @@
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
+import Link from "next/link";
+
+const Footer = ({ currentYear, link, name }) => {
   return (
     <>
       <footer className="flex justify-around text-anime-primary">
         <div className="items-center py-3 my-5">
-          <h1 className="text-xl text-center lg:text-2xl">&copy; 2023 - {currentYear} Distributed by <a href="https://github.com/satriairawan05" target="_blank">Deuwi Satriya Irawan</a></h1>
+          <h3 className="text-xl text-center lg:text-2xl xl:text-3xl">
+            &copy; 2023 - {currentYear} Distributed by{" "}
+            <Link href={link} target="_blank" key={name}>
+              {name}
+            </Link>
+          </h3>
         </div>
       </footer>
     </>
