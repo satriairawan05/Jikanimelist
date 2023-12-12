@@ -2,6 +2,7 @@ import { Lato } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import Footer from '@/components/Footer'
 
 const font = Lato({ subsets: ['latin'], weight: "400" })
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <SpeedInsights />
+        <Footer />
       </body>
     </html>
   )

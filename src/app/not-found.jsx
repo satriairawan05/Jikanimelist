@@ -1,20 +1,22 @@
-"use client"
+"use client";
 
-import { FileSearch } from "@phosphor-icons/react"
-import { useRouter } from "next/navigation"
+import { FileSearch } from "@phosphor-icons/react";
+import { useRouter } from "next/navigation";
 
 const Page = () => {
-    const router = useRouter()
+  const router = useRouter();
 
-    return (
-        <div className="min-h-screen max-w-xl mx-auto flex justify-center items-center">
-            <div className="flex justify-center items-center gap-4 flex-col">
-                <FileSearch size={44} className="text-anime-accent"/>
-                <h3 className="text-anime-accent text-4xl font-bold">404 | NOT FOUND</h3>
-                <button onClick={() => router.back()} className="text-anime-primary hover:text-anime-accent transition-all underline">Kembali</button>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className="flex items-center justify-center max-w-xl min-h-screen mx-auto">
+      <div className="flex flex-col items-center justify-center gap-4">
+        <FileSearch size={44} className="text-anime-accent" />
+        <h3 className="text-4xl font-bold text-anime-accent">404 | NOT FOUND</h3>
+        <button onClick={() => router.back()} className="underline transition-all text-anime-primary hover:text-anime-accent">
+          Kembali
+        </button>
+      </div>
+    </div>
+  );
+};
 
-export default Page
+export default Page;
