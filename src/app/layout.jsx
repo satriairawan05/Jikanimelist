@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "@/components/Footer";
+import { currentYear, githubLink, name } from "@/libs/api";
 
 const font = Lato({ subsets: ["latin"], weight: "400" });
 
@@ -12,13 +13,12 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const currentYear = new Date().getFullYear();
   return (
     <html lang="en">
       <body className={`${font.className} bg-anime-dark`}>
         <Navbar />
         {children}
-        <Footer currentYear={currentYear} name="Deuwi Satriya Irawan" link={`https://github.com/satriairawan05`} />
+        <Footer currentYear={currentYear} name={name} link={githubLink} />
         <SpeedInsights />
       </body>
     </html>

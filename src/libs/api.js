@@ -20,4 +20,8 @@ const reproduce = (data, gap) => {
     return response
 }
 
-export { getAnimeResponse, getNestedAnimeResponse, reproduce }
+const currentYear = new Date().getFullYear();
+const githubLink = `https://github.com/satriairawan05`;
+const name = "Deuwi Satriya Irawan";
+
+export { getAnimeResponse, getNestedAnimeResponse, reproduce, currentYear, githubLink, name }
