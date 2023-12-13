@@ -1,9 +1,9 @@
-import { Lato } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "@/components/Footer";
-import { currentYear, githubLink, name } from "@/libs/api";
+import { Lato } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { currentYear, name } from "@/libs/api";
 
 const font = Lato({ subsets: ["latin"], weight: "400" });
 
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       <body className={`${font.className} bg-anime-dark`}>
         <Navbar />
         {children}
-        <Footer currentYear={currentYear} name={name} link={githubLink} />
+        <Footer currentYear={currentYear} name={name} link={process.env.NEXT_GITHUB_URL} />
         <SpeedInsights />
       </body>
     </html>
