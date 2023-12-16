@@ -4,6 +4,12 @@ const getAnimeResponse = async(resource, query) => {
     return anime
 }
 
+const getGithubUser = async() => {
+    const response =  await fetch(`${process.env.NEXT_PUBLIC_GITHUB_API_URL}`);
+    const user = response.json();
+    return user
+}
+
 const getNestedAnimeResponse = async(resource, objectProperty) => {
     const response = await getAnimeResponse(resource)
     return response.data.flatMap(item => item[objectProperty])
@@ -22,6 +28,5 @@ const reproduce = (data, gap) => {
 
 const currentYear = new Date().getFullYear();
 const githubLink = `https://github.com/satriairawan05`;
-const name = "Deuwi Satriya Irawan";
 
-export { getAnimeResponse, getNestedAnimeResponse, reproduce, currentYear, githubLink, name }
+export { getAnimeResponse, getNestedAnimeResponse, getGithubUser, reproduce, currentYear, githubLink }

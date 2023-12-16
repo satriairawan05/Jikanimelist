@@ -1,6 +1,8 @@
+import { getGithubUser } from "@/libs/api";
 import Link from "next/link";
 
-const Footer = ({ currentYear, link, name }) => {
+const Footer = async({ currentYear, link, name }) => {
+  const user = await getGithubUser()
   return (
     <>
       <footer className="flex justify-around text-anime-primary">
@@ -8,7 +10,7 @@ const Footer = ({ currentYear, link, name }) => {
           <p className="text-sm text-center lg:text-md xl:text-2xl">
             © 2023 - {currentYear} Distributed by{" "}
             <Link href={link} target="_blank" key={name} className="hover:text-anime-accent">
-              {name}
+              {user.name}
             </Link>
           </p>
         </div>
