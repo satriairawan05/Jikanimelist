@@ -4,15 +4,15 @@ const getAnimeResponse = async(resource, query) => {
     return anime
 }
 
-const getGithubUser = async() => {
-    const response =  await fetch(`${process.env.NEXT_PUBLIC_GITHUB_API_URL}`);
-    const user = response.json();
-    return user
-}
-
 const getNestedAnimeResponse = async(resource, objectProperty) => {
     const response = await getAnimeResponse(resource)
     return response.data.flatMap(item => item[objectProperty])
+}
+
+const getGithubUser = async() => {
+    const response =  await fetch(`${process.env.NEXT_PUBLIC_GITHUB_API_URL}`);
+    const user = await response.json();
+    return user
 }
 
 const reproduce = (data, gap) => {
