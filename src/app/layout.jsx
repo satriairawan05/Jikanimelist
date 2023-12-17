@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer currentYear={currentYear} link={process.env.NEXT_GITHUB_URL} />
         <SpeedInsights />
-      </body>
+      </body> 
     </html>
   );
 }

@@ -3,7 +3,7 @@ import { getGithubUser } from "@/libs/api";
 import Link from "next/link";
 
 const Page = async() => {
-  const user = await getGithubUser();
+  const user = await getGithubUser("satriairawan05");
   return (
     <>
       <div className="flex items-center justify-center my-5">

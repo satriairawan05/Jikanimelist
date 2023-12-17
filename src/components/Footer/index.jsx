@@ -2,7 +2,7 @@ import { getGithubUser } from "@/libs/api";
 import Link from "next/link";
 
 const Footer = async({ currentYear, link, name }) => {
-  const user = await getGithubUser()
+  const user = await getGithubUser("satriairawan05")
   return (
     <>
       <footer className="flex justify-around text-anime-primary">
