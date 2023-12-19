@@ -27,6 +27,5 @@ const reproduce = (data, gap) => {
 };
 
 const currentYear = new Date().getFullYear();
-const githubLink = `https://github.com/satriairawan05`;
 
-export { getAnimeResponse, getNestedAnimeResponse, getGithubUser, reproduce, currentYear, githubLink };
+export { getAnimeResponse, getNestedAnimeResponse, getGithubUser, reproduce, currentYear, };

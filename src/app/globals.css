@@ -7,8 +7,9 @@
   --color-dark: '#000000';
   --color-triary: #e4e4ed;
   --transition: 0.5s;
-  --anime-loading: 1s;
-  --scale: 102%;
+  --anime-loading: 1s infinite linear;
+  --anime-rotate: rotate(1turn);
+  --scale: 103%;
   --border-radius: 50%;
   --null: 0;
   --hundred-pixel: 100px;
@@ -41,11 +42,11 @@ img:hover {
   background: radial-gradient(farthest-side, var(--color-accent) 95%, var(--color-dark)) 50% 1px/24px
       24px no-repeat,
     radial-gradient(farthest-side, var(--color-dark) calc(100% - 28px), var(--color-triary) 0);
-  animation: circle var(--anime-loading) infinite linear;
+  animation: circle var(--anime-loading);
 }
 
 @keyframes circle {
   to {
-    transform: rotate(1turn);
+    transform: var(--anime-rotate);
   }
 }
