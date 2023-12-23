@@ -18,7 +18,7 @@ const Pagination = ({ page, limit, lastPage, setPage }) => {
 
   return (
     <div className="flex flex-col items-center justify-center gap-4 px-2 py-4 text-2xl text-anime-primary">
-      <p>
+      <p className="text-center lg:text-xl">
         Showing {limit} Data in Page {page} of {lastPage} Page
       </p>
       <div className="inline-flex mt-1 xs:mt-0">
