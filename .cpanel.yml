@@ -1,7 +1,0 @@
-    ---
-    deployment:
-      tasks:
-      - export DEPLOYPATH=/home/same9373/public_html/anime.samaricode.my.id
-      - /bin/cp -R * $DEPLOYPATH
-      - /bin/cp -R .next $DEPLOYPATH
-      - /bin/cp -R .next.config.js $DEPLOYPATH
